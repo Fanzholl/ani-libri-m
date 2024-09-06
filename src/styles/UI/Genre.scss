@@ -1,0 +1,18 @@
+@import '../index.scss';
+
+.GenreBox {
+
+      height: 40px;
+      display: inline-block;
+      vertical-align: top;
+
+      p {
+            max-width: auto;
+            display: block;
+            padding: 4px 10px;
+            color: $text-color;
+            font-size: 20px;
+            // text-transform: uppercase;
+            @include genreBorderBox;
+      }
+}

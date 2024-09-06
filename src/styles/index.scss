@@ -1,0 +1,27 @@
+$text-color: white;
+$BGColor: black;
+
+@mixin genreBorderBox {
+      border: 2px solid white;
+      border-radius: 8px;
+      background-color: black;
+}
+
+@mixin centerElements {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+@mixin genresContainer {
+      gap: 4px 10px;
+      flex-wrap: wrap;
+      @include centerElements;
+}
+
+@mixin backgroundImageStyles {
+      background-color: $BGColor;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}

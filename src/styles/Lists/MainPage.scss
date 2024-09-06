@@ -1,0 +1,17 @@
+.MainPage {
+      max-width: 1920px;
+      height: 100vh;
+      display: block;
+      margin: auto;
+      // background-color: red;
+
+      .CardsList {
+            width: 100%;
+            height: 100%;
+      }
+
+      h1 {
+            color: white;
+            font-size: 40px;
+      }
+}
