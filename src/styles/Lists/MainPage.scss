@@ -1,14 +1,12 @@
+@import '../index.scss';
+
 .MainPage {
-      max-width: 1920px;
-      height: 100vh;
+      max-width: 2040px;
+      // height: 100vh;
+      padding: 0 0 40px 0;
       display: block;
       margin: auto;
       // background-color: red;
-
-      .CardsList {
-            width: 100%;
-            height: 100%;
-      }
 
       h1 {
             color: white;

@@ -12,7 +12,7 @@ function Card({ name, posterURL, description, genres, season }: TitleObject) {
       genres = genres.length > 3 ? genres.slice(0, 3) : genres;
       genres.push(season.year);
 
-      const genresList: JSX.Element[] = genres.map(el => <Genre genre={el} />);
+      const genresList: JSX.Element[] = genres.map(el => <Genre key={el} genre={el} />);
 
       return (
             <div className='Card'>
@@ -23,7 +23,6 @@ function Card({ name, posterURL, description, genres, season }: TitleObject) {
                               <div className='GenreContainer'>
                                     {genresList}
                               </div>
-                              {/* <p className='Description'>{description}</p> */}
                               <Link to={''} className='WatchLink'>Смотреть</Link>
                         </div>
                   </div>

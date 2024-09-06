@@ -22,7 +22,7 @@ export async function getGenres() {
       try {
             const response = await axios.get(`${API}genres`);
             const genres = response.data; // получаем данные из ответа
-            console.log(genres); // выводим жанры в консоль
+            // console.log(genres); // выводим жанры в консоль
             return genres; // возвращаем жанры
       } catch (err) {
             console.log(`Error: ${err}!`);
@@ -34,9 +34,10 @@ export async function getTitlesByGenre(genre) {
             const response = await axios.get(`${API + TITLES}/search`, {
                   params: {
                         genres: genre,
-                        limit: 10,
+                        limit: 12,
                   }
             }); const data = response.data.list;
+            // console.log(222)
             return data;
       } catch (err) {
 

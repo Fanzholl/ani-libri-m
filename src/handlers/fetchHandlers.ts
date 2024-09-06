@@ -6,15 +6,20 @@ export async function fetchGenres() {
       return result;
 }
 
-export async function fetchTitlesByGenres(generes) {
-
-      const result: Array<Object> = generes.map(async (genre) => {
-            const result = await getTitlesByGenre(genre);
+export async function fetchTitlesByGenres(genres: TitleGenres) {
+      console.log(genres);
+      const result: Array<Object> = await Promise.all(genres.map(async (genre) => {
+            const titles = await getTitlesByGenre(genre);
             const genreTitleList: GenreTitleList = {
                   genre: genre,
-                  titleList: result,
-            }; return genreTitleList;
-      });
+                  titleList: titles,
+            };
+            return genreTitleList;
+      }));
+
+      // console.log(result);
+
+      return result;
 }
 
 export async function fetchTitiles(setTitiles) {

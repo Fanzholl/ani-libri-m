@@ -9,9 +9,7 @@ export type TitleObject = {
       },
 };
 
-export type TitleGenres = {
-      genres: Array<string>,
-}
+export type TitleGenres = Array<string>;
 
 export type GenreTitleList = {
       genre: string,
