@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import '../styles/Lists/MainPage.scss';
-import Card from "./cards/Card.tsx";
 import { fetchGenres, fetchTitiles, fetchTitlesByGenres } from "../handlers/fetchHandlers.ts";
 import CardsList from "./cards/CardsList.tsx";
 
