@@ -11,7 +11,14 @@ export type TitleObject = {
 
 export type TitleGenres = Array<string>;
 
+export type TitleName = string;
+
 export type GenreTitleList = {
       genre: string,
-      titleList: Array<Object>,
+      titleList: any[],
+}
+
+export type NameTitleList = {
+      name: string,
+      titleList: any[],
 }

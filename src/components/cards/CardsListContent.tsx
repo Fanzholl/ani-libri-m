@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from "./Card.tsx";
+import { titleListCreater } from '../../handlers/listsHandlers.tsx';
 import '../../styles/Cards/CardsList.scss';
 
 type Props = {
@@ -9,13 +10,11 @@ type Props = {
       },
 }
 
-function CardsList({ cardsList }: Props) {
+function CardsListContent({ cardsList }: Props) {
 
       const titleList: Array<any> = cardsList.titleList;
 
-      const LIST: JSX.Element[] = titleList.map(el => {
-            return <Card key={el.id} name={el.names.ru} posterURL={el.posters.original.url} description={el.description} genres={el.genres} season={el.season} />
-      });
+      const LIST: JSX.Element[] = titleListCreater(titleList);
 
       return (
             <div className="CardsBox">
@@ -27,4 +26,4 @@ function CardsList({ cardsList }: Props) {
       )
 }
 
-export default CardsList
+export default CardsListContent;

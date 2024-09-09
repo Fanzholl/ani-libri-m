@@ -43,3 +43,18 @@ export async function getTitlesByGenre(genre) {
 
       }
 }
+
+export async function getTitlesByName(name) {
+      try {
+            const response = await axios.get(`${API + TITLES}/search`, {
+                  params: {
+                        search: name,
+                        limit: 36,
+                  }
+            }); const data = response.data.list;
+            // console.log(222)
+            return data;
+      } catch (err) {
+
+      }
+}
