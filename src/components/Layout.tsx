@@ -63,7 +63,7 @@ function Layout() {
             <>
                   <header>
                         <nav>
-                              <NavLink to="/">Home Page</NavLink>
+                              <NavLink to="/">Главная</NavLink>
                         </nav>
                         <div className="SearchBar">
                               <input 

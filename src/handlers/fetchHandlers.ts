@@ -1,9 +1,20 @@
-import { getGenres, getTitles, getTitlesByGenre, getTitlesByName } from "../http/axios.js";
-import { TitleGenres, GenreTitleList, TitleName, NameTitleList } from '../types/Title.ts';
+import { getGenres, getTitle, getTitles, getTitlesByGenre, getTitlesByName } from "../http/axios.js";
+import { TitleGenres, GenreTitleList, TitleName, NameTitleList, Title } from '../types/Title.ts';
 
 export async function fetchGenres() {
       const result: TitleGenres = await getGenres();
       return result;
+}
+
+export async function fetchTitle(id: string) {
+      const result = await getTitle(id);
+
+      const title: Title = {
+            id: result.id,
+            title: result,
+      }
+
+      return title;
 }
 
 export async function fetchTitlesByGenres(genres: TitleGenres) {

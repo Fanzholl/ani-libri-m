@@ -5,7 +5,7 @@ import Genre from '../UI/Genre.tsx';
 import { Link } from 'react-router-dom';
 import { TitleObject } from '../../types/Title.ts';
 
-function Card({ name, posterURL, description, genres, season }: TitleObject) {
+function Card({ id, name, posterURL, description, genres, season }: TitleObject) {
 
       description = cardTextSlicer(description, 100);
       name = cardTextSlicer(name, 40);
@@ -23,7 +23,7 @@ function Card({ name, posterURL, description, genres, season }: TitleObject) {
                               <div className='GenreContainer'>
                                     {genresList}
                               </div>
-                              <Link to={''} className='WatchLink'>Смотреть</Link>
+                              <Link to={`/video/${id}`} className='WatchLink'>Смотреть</Link>
                         </div>
                   </div>
             </div>

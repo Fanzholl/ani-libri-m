@@ -3,6 +3,21 @@ import axios from "axios";
 const API = 'https://api.anilibria.tv/v3/';
 const TITLES = 'title';
 
+export async function getTitle(id) {
+      try {
+          const response = await axios.get(`${API}${TITLES}`, {
+              params: {
+                  id: id,
+              }
+          });
+          const data = response.data; // Убедитесь, что `data` имеет правильную структуру
+          return data;
+      } catch (err) {
+          console.error(`Error: ${err}`);
+          throw err;
+      }
+  }
+
 export async function getTitles() {
       try {
             const response = await axios.get(`${API + TITLES}/updates`, {

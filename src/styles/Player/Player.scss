@@ -1,0 +1,40 @@
+@import '~@vidstack/react/player/styles/default/theme.css';
+@import '~@vidstack/react/player/styles/default/layouts/video.css';
+
+// Основной контейнер для плеера
+.video-player-container {
+      width: 1920px;
+      height: 1080px;
+      display: block;
+      margin: auto;
+      .media-player[data-view-type="video"] {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            height: auto;
+            font-size: initial;
+      }
+
+      .vds-video-layout,
+      .vds-audio-layout,
+      .plyr {
+            font-size: initial; // Убираем глобальное font-size: 0
+      }
+
+      .vds-video-layout * {
+            font-size: initial; // Убираем font-size: 0 для всех дочерних элементов
+      }
+
+      // Переопределяем font-size для отдельных компонентов
+      .vds-poster {
+            font-size: initial; // Переопределяем для постера
+      }
+
+      .vds-button {
+            font-size: 16px; // Пример для кнопок
+      }
+
+      .vds-caption {
+            font-size: 14px; // Пример для субтитров
+      }
+
+}

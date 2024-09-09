@@ -1,4 +1,5 @@
 export type TitleObject = {
+      id: string,
       name: string,
       posterURL: string,
       description: string,
@@ -21,4 +22,31 @@ export type GenreTitleList = {
 export type NameTitleList = {
       name: string,
       titleList: any[],
+}
+
+export type Title = {
+      id: string;
+      title: {
+            id: string;
+            name: string;
+            posterURL: string;
+            description: string;
+            genres: Array<string>;
+            season: {
+                  string: string;
+                  year: string;
+            };
+            player: {
+                  host: string;
+                  list: {
+                        [key: string]: {
+                              hls: {
+                                    fhd: string;
+                                    hd: string;
+                                    sd: string;
+                              }
+                        }
+                  };
+            };
+      }
 }

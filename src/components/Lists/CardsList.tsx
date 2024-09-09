@@ -7,7 +7,6 @@ type Props = {
 }
 
 function CardsList({ loading, titles }: Props): JSX.Element {
-      
 
       console.log(titles);
 
