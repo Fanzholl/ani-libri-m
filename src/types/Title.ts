@@ -36,6 +36,17 @@ export type Title = {
                   string: string;
                   year: string;
             };
+            posters: {
+                  original: {
+                        url: string,
+                  };
+                  medium: {
+                        url: string,
+                  };
+                  snall: {
+                        url: string,
+                  };
+            };
             player: {
                   host: string;
                   list: {
